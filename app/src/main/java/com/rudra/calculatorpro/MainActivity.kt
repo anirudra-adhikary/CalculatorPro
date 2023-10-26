@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
         binding.btn0.setOnClickListener {
             binding.display.append("0")
         }
