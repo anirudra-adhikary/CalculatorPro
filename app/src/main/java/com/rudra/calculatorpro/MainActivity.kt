@@ -102,6 +102,10 @@ class MainActivity : AppCompatActivity() {
                 binding.result.text = "Error: ${e.message}"
             }
         }
+        
+        binding.btnN1.setOnClickListener {
+            // TODO:
+        }
 
 
     }

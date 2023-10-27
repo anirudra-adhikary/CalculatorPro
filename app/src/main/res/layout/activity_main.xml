@@ -54,6 +54,7 @@
         </Button>
 
         <Button
+            android:id="@+id/btnN1"
             style="@style/buttonNumber">
 
         </Button>
