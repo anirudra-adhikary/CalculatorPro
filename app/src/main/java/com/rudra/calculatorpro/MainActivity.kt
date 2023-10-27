@@ -83,6 +83,11 @@ class MainActivity : AppCompatActivity() {
             binding.result.text = ""
         }
 
+        binding.btnBS.setOnClickListener {
+            if(binding.display.text.isNotEmpty())
+                binding.display.text =  binding.display.text.substring(0, binding.display.text.length - 1)
+        }
+
         binding.calculate.setOnClickListener {
             try {
                 val value = binding.display.text.toString()

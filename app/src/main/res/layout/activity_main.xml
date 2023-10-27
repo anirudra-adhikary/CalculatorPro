@@ -49,6 +49,8 @@
         </Button>
 
         <Button
+            android:id="@+id/btnBS"
+            android:text="⌫"
             style="@style/buttonNumber">
 
         </Button>
