@@ -43,7 +43,7 @@
 
         <Button
             android:id="@+id/btnClear"
-            style="@style/buttonNumber"
+            style="@style/buttonOperation"
             android:text="AC">
 
         </Button>
@@ -51,7 +51,7 @@
         <Button
             android:id="@+id/btnBS"
             android:text="⌫"
-            style="@style/buttonNumber">
+            style="@style/buttonOperation">
 
         </Button>
 
