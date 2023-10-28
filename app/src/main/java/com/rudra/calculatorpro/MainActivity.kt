@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnMul.setOnClickListener {
-            binding.display.append("*")
+            binding.display.append("×")
         }
 
         binding.btnDiv.setOnClickListener {
@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.calculate.setOnClickListener {
             try {
-                val value = binding.display.text.toString()
+                val value = binding.display.text.toString().replace('×', '*')
                 val expression = ExpressionBuilder(value).build()
                 val result = expression.evaluate()
 
@@ -104,7 +104,11 @@ class MainActivity : AppCompatActivity() {
                 binding.result.text = "Division by zero"
             } catch (e: Exception) {
                 // Handle other exceptions that might occur during evaluation
-                binding.result.text = "Error: ${e.message}"
+                /*binding.result.text = "Error: ${e.message}"*/
+
+                var message = e.message
+                binding.result.text = message?.replace('*', '×')
+
             }
         }
         

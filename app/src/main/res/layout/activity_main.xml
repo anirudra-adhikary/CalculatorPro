@@ -98,7 +98,7 @@
         <Button
             android:id="@+id/btnMul"
             style="@style/buttonOperation"
-            android:text="X">
+            android:text="×">
 
         </Button>
 
