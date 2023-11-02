@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,62 +13,28 @@
         android:orientation="vertical"
         android:background="@color/black">
 
-    <TextView
-        android:id="@+id/display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="right"
-        android:text=""
-        android:layout_margin="20dp"
-        android:textSize="50dp"
-        />
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="364dp"
+            android:layout_height="141dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="right"
+            android:text=""
+            android:textSize="40dp" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text=""
-        android:textSize="25dp"
-        android:layout_margin="20dp"
-        />
-    </LinearLayout>
-
-
-    <LinearLayout
-        style="@style/buttonRow">
-
-        <Button
-            android:id="@+id/btnClear"
-            style="@style/buttonOperation"
-            android:text="AC">
-
-        </Button>
-
-        <Button
-            android:id="@+id/btnBS"
-            android:text="⌫"
-            style="@style/buttonOperation">
-
-        </Button>
-
-        <Button
-            android:id="@+id/btnN1"
-            style="@style/buttonNumber">
-
-        </Button>
-
-        <Button
-            android:id="@+id/btnDiv"
-            style="@style/buttonOperation"
-            android:text="/">
-
-        </Button>
-
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="359dp"
+            android:layout_height="117dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="25dp" />
 
     </LinearLayout>
+
 
     <LinearLayout
         style="@style/buttonRow">
@@ -96,12 +61,17 @@
         </Button>
 
         <Button
-            android:id="@+id/btnMul"
+            android:id="@+id/btnSin"
             style="@style/buttonOperation"
-            android:text="×">
-
+            android:text="sin">
         </Button>
 
+        <Button
+            android:id="@+id/btnDiv"
+            style="@style/buttonOperation"
+            android:text="/">
+
+        </Button>
 
     </LinearLayout>
 
@@ -130,9 +100,15 @@
         </Button>
 
         <Button
-            android:id="@+id/btnMin"
+            android:id="@+id/btnCos"
             style="@style/buttonOperation"
-            android:text="-">
+            android:text="COS">
+        </Button>
+
+        <Button
+            android:id="@+id/btnMul"
+            style="@style/buttonOperation"
+            android:text="×">
 
         </Button>
 
@@ -164,11 +140,18 @@
         </Button>
 
         <Button
-            android:id="@+id/btnPlus"
+            android:id="@+id/btnTan"
             style="@style/buttonOperation"
-            android:text="+">
+            android:text="tan">
+        </Button>
+
+        <Button
+            android:id="@+id/btnMin"
+            style="@style/buttonOperation"
+            android:text="-">
 
         </Button>
+
 
     </LinearLayout>
 
@@ -186,6 +169,53 @@
             android:id="@+id/btn0"
             style="@style/buttonNumber"
             android:text="0">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnBS"
+            android:text="⌫"
+            android:textColor="@color/red"
+            style="@style/buttonOperation">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnDeg"
+            style="@style/buttonOperation"
+            android:text="deg">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/buttonOperation"
+            android:text="+">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:id="@+id/btnOpenBracket"
+            style="@style/buttonNumber"
+            android:text="(">
+        </Button>
+
+        <Button
+            android:id="@+id/btnClosingBracket"
+            style="@style/buttonNumber"
+            android:text=")">
+        </Button>
+
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/buttonOperation"
+            android:textColor="@color/red"
+            android:text="AC">
 
         </Button>
 

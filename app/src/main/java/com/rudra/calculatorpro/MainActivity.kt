@@ -3,8 +3,8 @@ package com.rudra.calculatorpro
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.rudra.calculatorpro.databinding.ActivityMainBinding
+import kotlin.math.PI
 import net.objecthunter.exp4j.ExpressionBuilder
-import kotlin.math.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -90,7 +90,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.calculate.setOnClickListener {
             try {
-                val value = binding.display.text.toString().replace('×', '*')
+                var value = binding.display.text.toString().replace('×', '*')
+                value = value.replace("°", "*0.017453292519943295769236902419")
                 val expression = ExpressionBuilder(value).build()
                 val result = expression.evaluate()
 
@@ -101,7 +102,7 @@ class MainActivity : AppCompatActivity() {
                 }
             } catch (e: ArithmeticException) {
                 // Handle division by zero exception
-                binding.result.text = "Division by zero"
+                binding.result.text = "INDEFINITE"
             } catch (e: Exception) {
                 // Handle other exceptions that might occur during evaluation
                 /*binding.result.text = "Error: ${e.message}"*/
@@ -111,11 +112,28 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-        
-        binding.btnN1.setOnClickListener {
-            // TODO:
+
+        binding.btnSin.setOnClickListener {
+            binding.display.append("sin(")
         }
 
+        binding.btnCos.setOnClickListener {
+            binding.display.append("cos(")
+        }
+
+        binding.btnTan.setOnClickListener {
+            binding.display.append("tan(")
+        }
+        binding.btnDeg.setOnClickListener {
+            binding.display.append("°")
+        }
+
+        binding.btnOpenBracket.setOnClickListener {
+            binding.display.append("(")
+        }
+        binding.btnClosingBracket.setOnClickListener {
+            binding.display.append(")")
+        }
 
     }
 
